@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Montserrat:wght@100;200&family=Orbitron&display=swap;200&family=Ubuntu:wght@300&display=swap');
+
+.flip-card {
+    background-color: transparent;
+    perspective: 1000px;
+    border-radius: 20px;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    height: 16rem;
+    max-width: 28rem;
+    margin: 2rem auto;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+    border-radius: 20px;
+
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 20px;
+  }
+  
+  .flip-card-front {
+    background-image: url('./wave_4.png'),url('./plain_purple.jpg');
+    background-position: right bottom, left top;
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
+  }
+  
+  .flip-card-back {
+    transform: rotateY(180deg);
+    background-image: url('./plain_purple.jpg');
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
+  }
+
+  .top {
+    display: flex;
+    justify-content: space-between;
+    margin: 23px;
+}
+
+#chip{
+    background-image: url('./chip_2.jpg');
+    width: 3rem;
+    height: 2.5rem;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+img.mastercard {
+    width: 5rem;
+    height: 3rem;
+}
+.cardNumber h1{
+    font-family: 'Inconsolata', monospace;
+    color: white;
+    padding: 1rem 0;
+    font-weight: bolder;
+    letter-spacing: 2px;
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin: 1rem;
+    color: white;
+}
+
+.blackRectangle{
+    background-image: url('./black_rectangle.png');
+    width: 100%;
+    height: 40px;
+    margin-top: 55px;
+}
+
+#cvv {
+    height: 30px;
+    background-color: white;
+    margin: 2rem 0 2rem 2rem;
+}
+.mastercardBack {
+    position: fixed;
+    width: 6rem;
+    height: 3rem;
+    right: 2px;
+}
+
+.flip-card-back h6 {
+    position: fixed;
+    right: 2px;
+    padding: 4px;
+}
+
+.flip-card-back h5{
+    position: fixed;
+    right: 5px;
+    color: white;
+}
+
+.form-group{
+  text-align: left;
+  padding: 0px;
+  margin: 15px 0px ;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+}
+
+.btn{
+  width: 10rem;
+  margin: 10px;
+  padding: 10px;
+}
+
+.space {
+  width: 100%;
+  height: 7rem;
+}
+
+.container.form {
+  position: absolute;
+  width: 50%;
+  margin: auto;
+  left: 19.5rem;
+  top: 11rem;
+  z-index: -1;
+  border-radius: 10px;
+  box-shadow: rgb(50 50 93 / 25%) 0px 50px 100px -20px, rgb(0 0 0 / 30%) 0px 30px 60px -30px, rgb(10 37 64 / 35%) 0px -2px 6px 0px inset;
+}
+
+@media only screen and (max-width: 500px) {
+  .container.form {
+    width: 95%;
+    margin: auto;
+    left: 0.5rem;
+  }
+}  
+
+/*
+
+@media only screen and (max-width: 800px) {
+  .container.form {
+    width: 95%;
+    margin: auto;
+    left: 3.5rem;
+  }
+}   */
+
+/* @media only screen and (max-width: 600px) {
+  .container.form {
+    width: 95%;
+    margin: auto;
+    left: 3.5rem;
+  }
+}   */
